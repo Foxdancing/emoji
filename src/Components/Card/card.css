@@ -1,0 +1,47 @@
+.wrap{
+    background-color: rgb(240, 239, 244);
+    margin: 0 auto;
+    max-width: 700px;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 20px 0px;
+    
+}
+
+.cards{
+    width: 170px;
+    height: 105px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 4px 13px;
+    margin: 5px;
+    background: rgb(255, 255, 255);
+}
+
+.symbol{
+    width: 10px;
+    height: 10px;
+}
+
+h3{
+    color: black;
+    font-family: 'SchoolBook';
+    font-size: 17px;
+    font-weight: 400;
+    text-align: left;
+    margin: 10px;
+}
+
+.keywords{
+    display: flex;
+    text-align: center;
+    color: rgb(26, 26, 26);
+    font-family: 'Roboto';
+    font-size: 9px;
+    margin: 0 auto;
+}
+
