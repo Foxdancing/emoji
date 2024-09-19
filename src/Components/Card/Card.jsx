@@ -1,22 +1,24 @@
-import React from 'react'
-import './card.css'
+import React from "react";
+import "./card.css";
 
-export default function Card({emoji, serch}) {
- console.log(serch);
-
+export default function Card({ emoji, searchEmoji }) {
   return (
-    <div className='wrap'>
-        
-        {emoji.map(elem => (
-          elem.title.includes(serch)))}
+    <div className="wrap">
+      {emoji
+      .filter(
+        elem =>
+          elem.keywords.includes(searchEmoji.trim()) || 
+          elem.title.includes(searchEmoji.trim())
+        )
+        // .trim - метод, который убирает пробелы
 
-        {emoji.map ((elem, index) => (
-            <div className='cards'>
-                <p className='symbol'>{elem.symbol}</p>
-                <h3>{elem.title}</h3>
-                <p className='keywords'>{elem.keywords}</p>
-            </div>
-        ))}
+      .map((elem, index) => (
+        <div className="card" key={index}>
+          <p className="symbol">{elem.symbol}</p>
+          <h3>{elem.title}</h3>
+          <p className="keywords">{elem.keywords}</p>
+        </div>
+      ))}
     </div>
   );
 }
